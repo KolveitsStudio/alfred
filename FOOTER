@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Custom CSS for the body */
+        body {
+            margin: 0; /* Remove default margin */
+        }
+
+        /* Custom CSS for the footer */
+        .footer {
+            padding: 80px 0 78px; /* Increased padding: top, right/left, bottom */
+            display: flex; /* Use flexbox for layout */
+            justify-content: space-between; /* Space between elements */
+            align-items: center; /* Center items vertically */
+            position: relative; /* Position relative to prevent overlap */
+            bottom: 0; /* Align to the bottom */
+            width: 100%; /* Full width of the page */
+            background-color: #0B0B0B; /* Black background */
+            color: #CCCCCC; /* Gray text */
+          z-index: 1000;
+        }
+
+        .footer-container {
+            max-width: 1150px; /* Maximum width for the footer */
+            margin: 0 auto; /* Center the footer container */
+            width: 100%; /* Full width up to max-width */
+            display: flex; /* Flexbox for items in the container */
+            justify-content: space-between; /* Space between copyright and icons */
+            align-items: center; /* Center vertically */
+        }
+
+        .copyright {
+            margin-left: 0; /* Remove left margin */
+        }
+
+        .social-icons {
+            margin-right: 0; /* Remove right margin */
+        }
+
+        .social-icons i {
+            margin-left: 16px; /* Space between icons */
+            color: white; /* Icon color */
+            font-size: 16px; /* Icon size */
+            cursor: pointer; /* Change cursor to pointer on hover */
+        }
+    </style>
+</head>
+<body>
+    <!-- Footer HTML -->
+    <div class="footer">
+        <div class="footer-container">
+            <div class="copyright">© Copyright 2023 - Alfred A. Berge AS</div>
+            <div class="social-icons">
+                <i class="fab fa-facebook-square"></i>
+                <i class="fab fa-instagram"></i>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
