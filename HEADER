@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #18191B; /* Background color */
+        }
+
+        header {
+            display: flex;
+            justify-content: center; /* Centering the content */
+            align-items: center; /* Center items vertically */
+            height: 70px;
+            background-color: #18191B; /* Header background */
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .header-container {
+            max-width: 1150px; /* Maximum width for the header */
+            width: 100%; /* Ensure it takes full width up to max-width */
+            display: flex;
+            justify-content: space-between; /* Space between logo and nav */
+            align-items: center; /* Center vertically */
+            padding: 0 20px; /* Padding on left and right */
+            margin: 0 auto; /* Centering the container */
+        }
+
+        #logo {
+            display: flex; /* Use flexbox for alignment */
+            align-items: center; /* Center the logo vertically */
+        }
+
+        #logo img {
+    max-height:  66px; /* Logo size */
+    margin: 5px 0px; /* Remove default margin */
+    display: block; /* Remove any bottom space */
+}
+
+
+        nav {
+            display: flex;
+        }
+
+        #mainmenu {
+            display: flex;
+            list-style: none;
+            font-size: 11px;
+            font-weight: 400;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            padding: 0;
+            margin: 0;
+        }
+
+        #mainmenu li {
+            margin: 0;
+        }
+
+        #mainmenu a {
+            display: block;
+            padding: 25px 0 22px 20px;
+            line-height: 33px;
+            text-decoration: none;
+            color: #fff;
+            text-align: center;
+            outline: none;
+            text-transform: uppercase;
+            transition: color 0.3s ease; /* Smooth transition for color */
+        }
+
+        #mainmenu a::after {
+            font-family: "FontAwesome"; /* Specify Font Awesome */
+            content: "\f111"; /* Replace with desired Font Awesome icon code */
+            font-size: 6px; /* Size of the bullet point */
+            color: #FAB702; /* Your yellow color */
+            margin: 0px 0px 0px 20px; /* Space between text and bullet */
+            float: right;
+        }
+
+        /* Remove bullet point from the last nav item */
+        #mainmenu li:last-child a::after {
+            content: ""; /* Remove content for the last item */
+        }
+
+        #mainmenu a:hover {
+            color: #FAB702; /* Hover color for nav items */
+        }
+
+        /* Optional mobile adjustments */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column; /* Stack items vertically on small screens */
+                height: auto; /* Allow height to adjust */
+                padding: 10px 0; /* Less padding on small screens */
+            }
+
+            #mainmenu {
+                flex-direction: column; /* Stack menu items vertically */
+                align-items: center; /* Center items */
+            }
+
+            #mainmenu a {
+                padding: 15px 0; /* Adjust padding for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="header-container">
+        <div id="logo">
+            <a href="#"><img src="https://alfredberge.no/wp-content/uploads/2023/11/AlfrABerge-logo-2.png" alt="Logo"></a>
+        </div>
+        <nav>
+            <ul id="mainmenu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Produkter</a></li>
+                <li><a href="#">Våre Tjenester</a></li>
+                <li><a href="#">Referanser</a></li>
+                <li><a href="#">Om Oss</a></li>
+                <li><a href="#">Kontakt</a></li> <!-- No bullet point here -->
+            </ul>
+        </nav>
+    </div>
+</header>
+</body>
+</html>
