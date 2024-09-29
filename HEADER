@@ -1,5 +1,3 @@
-<head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             margin: 0;
@@ -15,7 +13,6 @@
             background-color: #18191B; /* Header background */
             position: fixed;
             width: 100%;
-            z-index: 1000;
         }
 
         .header-container {
@@ -34,11 +31,10 @@
         }
 
         #logo img {
-    max-height:  66px; /* Logo size */
-    margin: 5px 0px; /* Remove default margin */
-    display: block; /* Remove any bottom space */
-}
-
+            max-height: 66px; /* Logo size */
+            margin: 5px 0px; /* Remove default margin */
+            display: block; /* Remove any bottom space */
+        }
 
         nav {
             display: flex;
@@ -68,7 +64,7 @@
             text-align: center;
             outline: none;
             text-transform: uppercase;
-            transition: color 0.3s ease; /* Smooth transition for color */
+            transition: color 0.3s ease, background 0.3s ease; /* Smooth transition for color and background */
         }
 
         #mainmenu a::after {
@@ -86,7 +82,12 @@
         }
 
         #mainmenu a:hover {
-            color: #FAB702; /* Hover color for nav items */
+            color: #FAB702 !important; /* Ensure hover color takes precedence */
+            background: transparent; /* Keep background transparent on hover */
+        }
+
+        #mainmenu a:hover::after {
+            color: #FAB702 !important; /* Ensure icon color changes on hover */
         }
 
         /* Optional mobile adjustments */
@@ -107,14 +108,13 @@
             }
         }
     </style>
-</head>
 <body>
 <header>
     <div class="header-container">
         <div id="logo">
             <a href="#"><img src="https://alfredberge.no/wp-content/uploads/2023/11/AlfrABerge-logo-2.png" alt="Logo"></a>
         </div>
-        <nav>
+        <nav class="nav-hover">
             <ul id="mainmenu">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Produkter</a></li>
@@ -127,4 +127,3 @@
     </div>
 </header>
 </body>
-</html>
